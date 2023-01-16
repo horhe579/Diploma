@@ -1,0 +1,9 @@
+<p>Hello <%= @resource.email %>,</p>
+
+<p>Welcome to our site.</p>
+
+<p>To confirm your account, please follow the link below:</p>
+
+<p><%= confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>
+
+<p>If you have any issues, please contact us.</p>

@@ -3,6 +3,17 @@ require "active_support/core_ext/integer/time"
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000}
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              'smtp-relay.sendinblue.com',
+    port:                 587,
+    user_name:            'dm.mail.confirmation@gmail.com',
+    password:             'BavFKhEMInD1N4xQ',
+    authentication:       'plain',
+    enable_starttls_auto: true  }
+
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
